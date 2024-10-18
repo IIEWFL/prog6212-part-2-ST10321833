@@ -1,0 +1,36 @@
+﻿<Window x:Class="CMCS4.SubmitClaimWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Submit Claim" Height="400" Width="600" Background="Black">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+       
+        <TextBlock Text="Enter Claim Description:" Grid.Row="0" Margin="5" Foreground="White"/>
+        <TextBox x:Name="LecturerNameTextBox" Grid.Row="0" Margin="150,5,5,5" Width="300"/>
+
+        
+        <TextBlock Text="Hours Worked:" Grid.Row="1" Margin="5" Foreground="White"/>
+        <TextBox x:Name="HoursWorkedTextBox" Grid.Row="1" Margin="150,5,5,5" Width="100"/>
+
+        <TextBlock Text="Hourly Rate:" Grid.Row="2" Margin="5" Foreground="White"/>
+        <TextBox x:Name="HourlyRateTextBox" Grid.Row="2" Margin="150,5,5,5" Width="100"/>
+
+     
+        <TextBlock Text="Notes:" Grid.Row="3" Margin="5,45,5,155" Grid.RowSpan="2" Foreground="White"/>
+        <TextBox x:Name="NotesTextBox" Grid.Row="3" Margin="150,5,5,5" Width="300" Height="80"/>
+
+       
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,121,0,5">
+            <Button Content="Submit" Width="100" Margin="10" Click="Submit_Click" Background="#800080" Foreground="White"/>
+            <Button Content="Cancel" Width="100" Margin="10" Click="Cancel_Click" Background="#800080" Foreground="White"/>
+        </StackPanel>
+    </Grid>
+</Window>
